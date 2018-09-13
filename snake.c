@@ -4,8 +4,7 @@ void game();
 int main(void)
 {
 	do{
-		char x;
-		scanf("%c", &x);	
+		getchar();
 		game();
 	}while(1);
 }
