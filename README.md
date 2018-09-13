@@ -1,5 +1,4 @@
-#Snake
-
+# Snake
 This project is about making a snake game that works on stdout.
 
 ## Implemented:
