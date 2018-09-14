@@ -33,6 +33,10 @@ void game()
 			else
 			{
 				printf(" "); //implement directions function here.
+				if(col == 4 && row == 3)
+				{
+					printf("@");
+				}
 			}
 			
 		} 
