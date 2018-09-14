@@ -1,11 +1,12 @@
 #include<stdio.h>
+static int i=1, j=1;
 int directions();
-int snake();
 void game();
 int main(void)
 {
+	getchar();
 	do{
-		getchar(); // call directions function here.
+		directions();
 		game();
 	}while(1);
 }
@@ -32,11 +33,14 @@ void game()
 			}
 			else
 			{
-				printf(" "); //implement directions function here.
-				if(col == 4 && row == 3)
-				{
-					printf("@");
-				}
+					if(row == i && col == j)
+					{
+						printf("@");
+					}
+					else
+					{
+						printf(" "); 
+					}
 			}
 			
 		} 
@@ -45,36 +49,27 @@ void game()
 	
 }
 
-int snake()
-{
-	return 1;
-}
 
 int directions()
 {
 	char dir;
-	int row, col;
 	scanf("%c", &dir);
 
 	if(dir == 'w')
 	{
-		row = row - 1;	
-		return 1;
+		i = i-1;
 	}
 	else if(dir == 'a')
 	{
-		col = col -1;
-		return 2;
+		j = j-1;
 	}
 	else if(dir == 's')
 	{
-		row = row + 1;
-		return 3;
+		i = i+1;
 	}
 	else if(dir == 'd')
 	{
-		col = col + 1;
-		return 4;
+		j = j+1;
 	}
 	else
 	{
